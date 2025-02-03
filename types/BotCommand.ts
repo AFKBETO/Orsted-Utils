@@ -18,4 +18,4 @@ export type BotCommand = {
         | SlashCommandSubcommandsOnlyBuilder
         | SlashCommandOptionsOnlyBuilder;
     execute: (interaction: CommandInteraction) => Promise<void>;
-}
+};
