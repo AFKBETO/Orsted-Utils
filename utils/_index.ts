@@ -1,5 +1,13 @@
-import { isBotCommand } from './typeguard.ts';
+import {
+    isBotCommand,
+    isMessageContextMenuCommand,
+    isSlashCommand,
+    isUserContextMenuCommand,
+} from './typeguard.ts';
 
 export const Utils = {
     isBotCommand,
+    isMessageContextMenuCommand,
+    isUserContextMenuCommand,
+    isSlashCommand,
 };
