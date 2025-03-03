@@ -1,15 +1,10 @@
-import { UserContextMenuCommandInteraction } from 'discord.js';
 import {
     CommandInteraction,
     ContextMenuCommandBuilder,
     MessageContextMenuCommandInteraction,
     SlashCommandBuilder,
+    UserContextMenuCommandInteraction,
 } from 'discord.js';
-
-type BotInteraction =
-    | CommandInteraction
-    | MessageContextMenuCommandInteraction
-    | UserContextMenuCommandInteraction;
 
 /**
  * The SlashCommand type.
@@ -20,7 +15,7 @@ type BotInteraction =
 export type SlashCommand = {
     cooldown?: number;
     data: SlashCommandBuilder;
-    execute: (interaction: BotInteraction) => Promise<void>;
+    execute: (interaction: CommandInteraction) => Promise<void>;
 };
 
 /**
@@ -33,7 +28,9 @@ export type MessageContextMenuCommand = {
     cooldown?: number;
     data: ContextMenuCommandBuilder;
     type: 'MESSAGECONTEXT';
-    execute: (interaction: BotInteraction) => Promise<void>;
+    execute: (
+        interaction: MessageContextMenuCommandInteraction,
+    ) => Promise<void>;
 };
 
 /**
@@ -47,7 +44,7 @@ export type UserContextMenuCommand = {
     cooldown?: number;
     data: ContextMenuCommandBuilder;
     type: 'USERCONTEXT';
-    execute: (interaction: BotInteraction) => Promise<void>;
+    execute: (interaction: UserContextMenuCommandInteraction) => Promise<void>;
 };
 
 export type BotCommand =
