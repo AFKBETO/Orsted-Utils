@@ -1,6 +1,10 @@
 {
 	"name": "@orsted/utils",
 	"version": "0.1.0",
+	"imports": {
+		"@std/path": "jsr:@std/path@^1.0.8",
+		"mongoose": "npm:mongoose@^8.9.6"
+	},
 	"exports": "./index.ts",
 	"lint": {
 		"include": ["**/*.ts"],
