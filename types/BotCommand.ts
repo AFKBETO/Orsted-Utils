@@ -27,7 +27,6 @@ export type SlashCommand = {
 export type MessageContextMenuCommand = {
     cooldown?: number;
     data: ContextMenuCommandBuilder;
-    type: 'MESSAGECONTEXT';
     execute: (
         interaction: MessageContextMenuCommandInteraction,
     ) => Promise<void>;
@@ -43,7 +42,6 @@ export type MessageContextMenuCommand = {
 export type UserContextMenuCommand = {
     cooldown?: number;
     data: ContextMenuCommandBuilder;
-    type: 'USERCONTEXT';
     execute: (interaction: UserContextMenuCommandInteraction) => Promise<void>;
 };
 
