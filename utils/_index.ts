@@ -1,3 +1,4 @@
+import { isValidURL } from './isValidURL.ts';
 import {
     isBotCommand,
     isMessageContextMenuCommand,
@@ -10,4 +11,5 @@ export const Utils = {
     isMessageContextMenuCommand,
     isUserContextMenuCommand,
     isSlashCommand,
+    isValidURL,
 };
