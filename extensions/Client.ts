@@ -4,6 +4,7 @@ import {
     SlashCommand,
     UserContextMenuCommand,
 } from '../types/_index.ts';
+import { ConfigData } from '../database/models/ConfigModel.ts';
 
 declare module 'discord.js' {
     interface Client {
@@ -11,5 +12,6 @@ declare module 'discord.js' {
         slashCommands: Collection<string, SlashCommand>;
         messageContextCommands: Collection<string, MessageContextMenuCommand>;
         userContextCommands: Collection<string, UserContextMenuCommand>;
+        botConfig: ConfigData;
     }
 }

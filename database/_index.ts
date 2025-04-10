@@ -11,3 +11,6 @@ export * from './modules/inviteData.ts';
 
 export * from './models/MatchModel.ts';
 export * from './modules/matchData.ts';
+
+export * from './models/ConfigModel.ts';
+export * from './modules/configData.ts';
