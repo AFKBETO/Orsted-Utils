@@ -17,6 +17,8 @@ export interface ConfigData {
     councilId: string;
     spoilerId: string;
     trashId: string;
+    femaleNames: string[];
+    maleNames: string[];
 }
 
 export interface ConfigInt extends Document, ConfigData {
@@ -40,6 +42,14 @@ export const Config = new Schema({
     councilId: String,
     spoilerId: String,
     trashId: String,
+    femaleNames: {
+        type: [String],
+        default: [],
+    },
+    maleNames: {
+        type: [String],
+        default: [],
+    },
     timestamp: {
         type: Number,
         default: Date.now(),

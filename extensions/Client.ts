@@ -5,6 +5,7 @@ import {
     UserContextMenuCommand,
 } from '../types/_index.ts';
 import { ConfigData } from '../database/models/ConfigModel.ts';
+import { RandomName } from '../utils/_index.ts';
 
 declare module 'discord.js' {
     interface Client {
@@ -13,5 +14,6 @@ declare module 'discord.js' {
         messageContextCommands: Collection<string, MessageContextMenuCommand>;
         userContextCommands: Collection<string, UserContextMenuCommand>;
         botConfig: ConfigData;
+        randomName: RandomName;
     }
 }
