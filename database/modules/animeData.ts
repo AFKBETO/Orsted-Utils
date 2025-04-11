@@ -1,11 +1,9 @@
 import AnimeModel, { AnimeInt } from '../models/AnimeModel.ts';
 
-export const getAnimeData = async (): Promise<AnimeInt[]> => {
+export async function getAnimeData(): Promise<AnimeInt[]> {
     return await AnimeModel.find();
-};
+}
 
-export const getAnimeByName = async (
-    name: string,
-): Promise<AnimeInt | null> => {
+export async function getAnimeByName(name: string): Promise<AnimeInt | null> {
     return await AnimeModel.findOne({ name: name });
-};
+}

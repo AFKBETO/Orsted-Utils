@@ -1,6 +1,6 @@
 import ConfigModel, { ConfigData } from '../models/ConfigModel.ts';
 
-export const getConfigData = async (): Promise<ConfigData> => {
+export async function getConfigData(): Promise<ConfigData> {
     const configQuery = await ConfigModel.find()
         .sort({ timestamp: -1 }).limit(1);
     if (configQuery.length === 0) {
@@ -10,12 +10,10 @@ export const getConfigData = async (): Promise<ConfigData> => {
     // deno-lint-ignore no-unused-vars
     const { _id, __v, timestamp, ...result } = latestConfig.toObject();
     return result;
-};
+}
 
-export const updateConfigData = async (
-    config: ConfigData,
-): Promise<boolean> => {
+export async function updateConfigData(config: ConfigData): Promise<boolean> {
     const newConfig = new ConfigModel(config);
     const result = await newConfig.save();
     return result !== null;
-};
+}
