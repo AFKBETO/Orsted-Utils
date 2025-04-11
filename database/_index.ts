@@ -14,3 +14,6 @@ export * from './modules/matchData.ts';
 
 export * from './models/ConfigModel.ts';
 export * from './modules/configData.ts';
+
+export * from './models/ImageModel.ts';
+export * from './modules/imageData.ts';

@@ -13,6 +13,7 @@ declare module 'discord.js' {
         slashCommands: Collection<string, SlashCommand>;
         messageContextCommands: Collection<string, MessageContextMenuCommand>;
         userContextCommands: Collection<string, UserContextMenuCommand>;
+        images: Collection<string, string[]>;
         botConfig: ConfigData;
         randomName: RandomName;
     }
