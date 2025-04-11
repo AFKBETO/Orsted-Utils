@@ -1,9 +1,8 @@
 import ConfigModel, { ConfigData } from '../models/ConfigModel.ts';
 
 export const getConfigData = async (): Promise<ConfigData> => {
-    const configQuery = await ConfigModel.find().sort({ timestamp: -1 }).limit(
-        1,
-    );
+    const configQuery = await ConfigModel.find()
+        .sort({ timestamp: -1 }).limit(1);
     if (configQuery.length === 0) {
         throw new Error('No config data found');
     }
