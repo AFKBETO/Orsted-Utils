@@ -7,8 +7,8 @@ export const getConfigData = async (): Promise<ConfigData> => {
         throw new Error('No config data found');
     }
     const latestConfig = configQuery[0];
-    const result: ConfigData = { ...latestConfig.toObject() };
-
+    // deno-lint-ignore no-unused-vars
+    const { _id, __v, timestamp, ...result } = latestConfig.toObject();
     return result;
 };
 
