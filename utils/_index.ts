@@ -1,3 +1,4 @@
+import { cacheImageData } from './cacheImageData.ts';
 import { initializeClientUtils } from './initializeClientUtils.ts';
 import { isValidURL } from './isValidURL.ts';
 import {
@@ -9,6 +10,7 @@ import {
 export { RandomName } from './RandomName.ts';
 
 export const Utils = {
+    cacheImageData,
     initializeClientUtils,
     isBotCommand,
     isMessageContextMenuCommand,
