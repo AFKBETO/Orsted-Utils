@@ -1,7 +1,7 @@
 import ImageData, { ImageInt } from '../models/ImageModel.ts';
 
 export async function getAllImageData(): Promise<ImageInt[]> {
-	return await ImageData.find();
+    return await ImageData.find();
 }
 
 export async function getImageData(name: string): Promise<string[]> {
