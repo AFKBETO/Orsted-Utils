@@ -8,6 +8,7 @@ export interface ConfigData {
     sweetSauceId: string;
     looperId: string;
     shameId: string;
+    shameReactIconId: string;
     orstedHotId: string;
     orstedSweetId: string;
     databaseId: string;
@@ -34,6 +35,7 @@ export const Config = new Schema({
     sweetSauceId: String,
     looperId: String,
     shameId: String,
+    shameReactIconId: String,
     orstedHotId: String,
     orstedSweetId: String,
     databaseId: String,
