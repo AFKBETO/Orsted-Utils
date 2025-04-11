@@ -56,4 +56,12 @@ export const Config = new Schema({
     },
 });
 
+const unconfigurableFields = [
+    'timestamp',
+];
+export type ConfigField = keyof ConfigData;
+export const configurableFields: ConfigField[] = Object.keys(Config.obj).filter(
+    (key) => unconfigurableFields.includes(key) === false,
+) as ConfigField[];
+
 export default model<ConfigInt>('config', Config);
