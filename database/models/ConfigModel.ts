@@ -2,6 +2,7 @@ import { Document, model, Schema } from 'mongoose';
 
 export interface ConfigData {
     authorizeRole: string;
+    donutId: string;
     eventLogId: string;
     hotSauceId: string;
     sweetSauceId: string;
@@ -27,6 +28,7 @@ export interface ConfigInt extends Document, ConfigData {
 
 export const Config = new Schema({
     authorizeRole: String,
+    donutId: String,
     eventLogId: String,
     hotSauceId: String,
     sweetSauceId: String,
