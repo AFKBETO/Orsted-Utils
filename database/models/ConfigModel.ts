@@ -1,6 +1,8 @@
 import { Document, model, Schema } from 'mongoose';
 
 export interface ConfigData {
+    version: string;
+    changelogChannelId: string;
     authorizeRole: string;
     donutId: string;
     eventLogId: string;
@@ -29,6 +31,8 @@ export interface ConfigInt extends Document, ConfigData {
 }
 
 export const Config = new Schema({
+    version: String,
+    changelogChannelId: String,
     authorizeRole: String,
     donutId: String,
     eventLogId: String,
@@ -66,6 +70,7 @@ export const Config = new Schema({
 });
 
 const unconfigurableFields = [
+    'version',
     'timestamp',
 ];
 export type ConfigField = keyof ConfigData;

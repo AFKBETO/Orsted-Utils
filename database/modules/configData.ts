@@ -17,3 +17,13 @@ export async function updateConfigData(config: ConfigData): Promise<boolean> {
     const result = await newConfig.save();
     return result !== null;
 }
+
+export async function updateVersion(version: string): Promise<boolean> {
+    const config = await getConfigData();
+    const newConfig = new ConfigModel({
+        ...config,
+        version,
+    });
+    const result = await newConfig.save();
+    return result !== null;
+}
