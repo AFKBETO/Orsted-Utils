@@ -73,4 +73,4 @@ export const configurableFields: ConfigField[] = Object.keys(Config.obj).filter(
     (key) => unconfigurableFields.includes(key) === false,
 ) as ConfigField[];
 
-export default model<ConfigInt>('config', Config);
+export const ConfigModel = model<ConfigInt>('config', Config);

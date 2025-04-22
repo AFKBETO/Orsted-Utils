@@ -1,4 +1,4 @@
-import ConfigModel, { ConfigData } from '../models/ConfigModel.ts';
+import { ConfigData, ConfigModel } from '../models/ConfigModel.ts';
 
 export async function getConfigData(): Promise<ConfigData> {
     const configQuery = await ConfigModel.find()
