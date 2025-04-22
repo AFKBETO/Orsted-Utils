@@ -21,6 +21,7 @@ export interface ConfigData {
     trashId: string;
     femaleNames: string[];
     maleNames: string[];
+    twitterEmbedLinks: string[];
 }
 
 export interface ConfigInt extends Document, ConfigData {
@@ -51,6 +52,10 @@ export const Config = new Schema({
         default: [],
     },
     maleNames: {
+        type: [String],
+        default: [],
+    },
+    twitterEmbedLinks: {
         type: [String],
         default: [],
     },
