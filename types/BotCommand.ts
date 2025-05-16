@@ -1,5 +1,5 @@
 import {
-    CommandInteraction,
+    ChatInputCommandInteraction,
     ContextMenuCommandBuilder,
     MessageContextMenuCommandInteraction,
     SlashCommandBuilder,
@@ -15,7 +15,7 @@ import {
 export type SlashCommand = {
     cooldown?: number;
     data: SlashCommandBuilder;
-    execute: (interaction: CommandInteraction) => Promise<void>;
+    execute: (interaction: ChatInputCommandInteraction) => Promise<void>;
 };
 
 /**
