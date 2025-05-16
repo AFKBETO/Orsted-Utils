@@ -45,7 +45,11 @@ export type UserContextMenuCommand = {
     execute: (interaction: UserContextMenuCommandInteraction) => Promise<void>;
 };
 
-export type BotCommand =
+type BaseBotCommand =
     | SlashCommand
     | MessageContextMenuCommand
     | UserContextMenuCommand;
+
+export type BotCommand = {
+    [K in keyof BaseBotCommand]: BaseBotCommand[K];
+};
