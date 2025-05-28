@@ -8,7 +8,7 @@ import {
     MessageContextMenuCommand,
     SlashCommand,
     UserContextMenuCommand,
-} from '@orsted/types';
+} from '../types/_index.ts';
 /**
  * Type guard for ICommand
  * @param object any

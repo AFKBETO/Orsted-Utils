@@ -7,6 +7,7 @@
 	},
 	"exports": {
 		".": "./index.ts",
+		"./types": "./types/_index.ts",
 		"./extensions": "./extensions/_index.ts",
 		"./database": "./database/_index.ts"
 	},
