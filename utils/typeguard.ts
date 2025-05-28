@@ -3,13 +3,12 @@ import {
     ContextMenuCommandBuilder,
     SlashCommandBuilder,
 } from 'discord.js';
-import { BotCommand } from '../types/_index.ts';
 import {
+    BotCommand,
     MessageContextMenuCommand,
     SlashCommand,
     UserContextMenuCommand,
-} from '../types/BotCommand.ts';
-
+} from '@orsted/types';
 /**
  * Type guard for ICommand
  * @param object any
@@ -19,18 +18,15 @@ import {
 export function isBotCommand(object: any): object is BotCommand {
     return 'data' in object && 'execute' in object;
 }
-
 export function isSlashCommand(command: BotCommand): command is SlashCommand {
     return command.data instanceof SlashCommandBuilder;
 }
-
 export function isMessageContextMenuCommand(
     command: BotCommand,
 ): command is MessageContextMenuCommand {
     return command.data instanceof ContextMenuCommandBuilder &&
         command.data.type === ApplicationCommandType.Message;
 }
-
 export function isUserContextMenuCommand(
     command: BotCommand,
 ): command is UserContextMenuCommand {
