@@ -5,12 +5,20 @@
 		"@std/path": "jsr:@std/path@^1.0.8",
 		"mongoose": "npm:mongoose@^8.9.6"
 	},
-	"exports": "./index.ts",
+	"exports": {
+		".": "./index.ts",
+		"./extensions": "./extensions/_index.ts",
+		"./database": "./database/_index.ts"
+	},
 	"lint": {
-		"include": ["**/*.ts"],
+		"include": [
+			"**/*.ts"
+		],
 		"exclude": [],
 		"rules": {
-			"tags": ["recommended"],
+			"tags": [
+				"recommended"
+			],
 			"include": [],
 			"exclude": []
 		}
@@ -22,7 +30,9 @@
 		"semiColons": true,
 		"singleQuote": true,
 		"proseWrap": "preserve",
-		"include": ["**/*.ts"],
+		"include": [
+			"**/*.ts"
+		],
 		"exclude": []
 	}
 }
