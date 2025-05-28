@@ -1,7 +1,7 @@
 import { Collection } from 'discord.js';
 import { ConfigData } from '../database/models/ConfigModel.ts';
-import { RandomName } from '../utils/RandomName.ts';
-import { BotCommand } from '../types/_index.ts';
+import { BotCommand, RandomName } from '../types/_index.ts';
+
 declare module 'discord.js' {
     interface Client {
         cooldowns: Collection<string, Collection<string, number>>;

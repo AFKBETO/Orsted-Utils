@@ -4,3 +4,4 @@ export type {
     SlashCommand,
     UserContextMenuCommand,
 } from './BotCommand.ts';
+export { RandomName } from './RandomName.ts';

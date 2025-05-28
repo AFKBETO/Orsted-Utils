@@ -1,5 +1,5 @@
 import { Client } from 'discord.js';
-import { RandomName } from './RandomName.ts';
+import { RandomName } from '../types/_index.ts';
 import { cacheImageData } from './cacheImageData.ts';
 
 export async function initializeClientUtils(client: Client): Promise<void> {
