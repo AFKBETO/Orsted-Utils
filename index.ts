@@ -7,4 +7,4 @@ export {
     isSlashCommand,
     isUserContextMenuCommand,
 } from './utils/typeguard.ts';
-export { RandomName } from './utils/RandomName.ts';
+export { ErrorHandlingService } from './utils/ErrorHandler.ts';
