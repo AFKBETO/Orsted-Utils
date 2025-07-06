@@ -1,5 +1,8 @@
 import { Sticker } from 'discord.js';
-import StickerModel from '../models/StickerModel.ts';
+import StickerModel, { StickerInt } from '../models/StickerModel.ts';
+export async function fetchStickerUsages(): Promise<StickerInt[]> {
+    return await StickerModel.find({}, null, { sort: { timestamp: -1 } });
+}
 export async function updateStickerUsage(sticker: Sticker): Promise<void> {
     await StickerModel.findOneAndUpdate(
         {
