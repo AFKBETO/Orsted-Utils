@@ -14,7 +14,6 @@ export const StickerSchema = new Schema({
     },
     lastUse: {
         type: Number,
-        default: Date.now(),
     },
 });
 export default model<StickerInt>('sticker', StickerSchema);

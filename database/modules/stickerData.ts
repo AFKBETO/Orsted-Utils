@@ -11,7 +11,7 @@ export async function updateStickerUsage(sticker: Sticker): Promise<void> {
                 useCount: 1,
             },
             $set: {
-                lastUse: Date.now(),
+                lastUse: Math.floor(Date.now() / 1000),
             },
         },
         {
