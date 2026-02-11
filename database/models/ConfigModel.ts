@@ -24,6 +24,7 @@ export interface ConfigData {
     femaleNames: string[];
     maleNames: string[];
     twitterEmbedLinks: string[];
+	orstedResetQuotes: string[];
 }
 
 export interface ConfigInt extends Document, ConfigData {
@@ -67,6 +68,10 @@ export const Config = new Schema({
         type: Number,
         default: Date.now(),
     },
+	orstedResetQuotes: {
+		type: [String],
+		default: [],
+	},
 });
 
 const unconfigurableFields = [
