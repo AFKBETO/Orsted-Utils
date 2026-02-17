@@ -18,3 +18,16 @@ export async function createHosData(hosData: {
     });
     return newHosData;
 }
+
+export async function updateHosData(id: string, reactCount: number): Promise<HosInt | null> {
+	const hosData = await HosModel.findOne({ id: id });
+	if (!hosData) {
+		return null;
+	}
+
+	hosData.reactCount = reactCount - 1;
+	await hosData.save();
+	return hosData;
+}
+
+		
